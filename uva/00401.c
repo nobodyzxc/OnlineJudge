@@ -1,18 +1,18 @@
 #include<stdio.h>
 #include<string.h>
-const char ans[4][30] = { 
-    " -- is not a palindrome." , 
-    " -- is a regular palindrome." , 
-    " -- is a mirrored string." , 
+const char ans[4][30] = {
+    " -- is not a palindrome." ,
+    " -- is a regular palindrome." ,
+    " -- is a mirrored string." ,
     " -- is a mirrored palindrome."
 };
 
 char getMir(char c){
-    const char en[] = "A   3  HIL JM O   2TUVWXY5" , 
+    const char en[] = "A   3  HIL JM O   2TUVWXY5" ,
                nm[] = "01SE z  8 ";
     if(c >= 'A' && c <= 'Z')
         return en[c - 'A'];
-    else 
+    else
         return nm[c - '0'];
 }
 
@@ -25,8 +25,8 @@ int main(void){
                 r = 0;
             if(input[i] != getMir(input[len - 1 - i]))
                 m = 0;
-        } 
+        }
         printf("%s%s\n\n" , input , ans[r + m*2]);
-    } 
+    }
     return 0;
 }

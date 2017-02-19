@@ -36,12 +36,10 @@ int main(void){
 				else if(ch == '@') g[i][j] = 1;
 				else continue;
 			}
-		
 		for(i = 0 ; i < s ; i++)
 			for(j = 0 ; j < z ; j++){
 				int tem = dfs(z , i , j , g);
 				if(tem)  mount++;
-				
 			}
         for(i = 0 ; i < s ; i++)
             delete [] g[i];

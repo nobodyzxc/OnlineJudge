@@ -15,7 +15,7 @@ int main(void){
 	while(1){
 		scanf("%c" , &tp);
 		if(tp == 'r'){
-			scanf("%f %f %f %f" , &square[i].l , &square[i].t , 
+			scanf("%f %f %f %f" , &square[i].l , &square[i].t ,
 					&square[i].r , &square[i].b);
 			square[i++].exist = 1;
 		}
@@ -34,7 +34,7 @@ int main(void){
 			if(square[i].exist == 0) break;
 			if(x > square[i].l && x < square[i].r &&
 					y < square[i].t && y > square[i].b){
-				printf("Point %d is contained in figure %d\n" , cnt , i + 1);	
+				printf("Point %d is contained in figure %d\n" , cnt , i + 1);
 				find = 1;
 			}
 		}

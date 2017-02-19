@@ -6,7 +6,7 @@ int main(void){
 	while(~scanf("%d" , &n)){
 		int cnt = 1 , acc = 1;
 		while(1){
-			if(acc % n == 0){	
+			if(acc % n == 0){
 				printf("%d\n" , cnt);
 				break;
 			}

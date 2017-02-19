@@ -8,7 +8,7 @@ int main(){
         int d = i , dg = i;
         while(d > 0) dg += d % 10 , d /= 10;
         if(ans[dg] == 0 || ans[dg] > i) ans[dg] = i;
-    } 
+    }
     int kase , req;
     scanf("%d" , &kase);
     for(int i = 0 ; i < kase ; i++){

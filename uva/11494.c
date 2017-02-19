@@ -19,9 +19,8 @@ int main(void){
 			if( (m / n == 1) && (m % n == 0))
 				puts("1");
 			else
-				puts("2");	
+				puts("2");
 		}
 	}
 	return 0;
 }
-

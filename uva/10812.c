@@ -17,7 +17,7 @@ int main(void){
 		}
 		printf("%d %d\n" , (s + d) / 2 , (s - d) / 2);
 		//quest a & b
-	}	
+	}
 	return 0;
 }
 

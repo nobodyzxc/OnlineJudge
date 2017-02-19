@@ -17,7 +17,7 @@ int main(void){
 	memset(lln , -1 , sizeof(lln));
 	lln[0] = 1 , lln[1] = 1;
 	while(1){
-		scanf("%lld" , &L);	
+		scanf("%lld" , &L);
 		if(L == 0)
 			return 0;
 		else

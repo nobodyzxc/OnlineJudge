@@ -42,7 +42,7 @@ int main(void){
 	for(i = 0 ; i < c ; i++){
 		scanf("%d" , &d);
 		ans(d);
-	}	
+	}
 	return 0;
 }
 
