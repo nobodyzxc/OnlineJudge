@@ -14,7 +14,7 @@ int main(){
     while(~scanf("%d%d" , &a , &b)){
         bool pass = true;
         pane.clear() , line.clear() , vecp.clear() , vecl.clear();
-        
+
         if(a > b) swap(a , b);
 
         vecp.push_back(make_pair(a , b));
@@ -30,35 +30,35 @@ int main(){
             line.insert(a) , line.insert(b);
             vecl.push_back(a) , vecl.push_back(b);
         }
-       
+
         sort(vecp.begin() , vecp.end());
-        
+
         //check opposide
         for(int i = 0 ; i < 3 ; i++)
             pass &= vecp[i*2] == vecp[i*2 + 1];
-        pass &= pane.size() <= 3; 
+        pass &= pane.size() <= 3;
 
         //avoid \( ([a-c]) , \1 \)*2
         set<int>::iterator lenA , lenB;
-        for(lenA = line.begin() ; 
+        for(lenA = line.begin() ;
                 lenA != line.end() ; lenA++){
-            for(lenB = lenA , lenB++ ; 
+            for(lenB = lenA , lenB++ ;
                     lenB != line.end() ; lenB++){
                 if(pane.find(make_pair(*lenA , *lenB)) == pane.end())
                     pass = false;
             }
         }
-        
-        //if exist (lenA , lenA) , 
+
+        //if exist (lenA , lenA) ,
         //the other two type should contain at least one (lenA)
-        for(lenA = line.begin() ; 
+        for(lenA = line.begin() ;
                 lenA != line.end() ; lenA++){
-            int sideTypeCount = 
+            int sideTypeCount =
                 count(vecl.begin() , vecl.end() , *lenA);
             pass &= (sideTypeCount % 4 == 0);
         }
 
-        puts(pass ? "POSSIBLE" : "IMPOSSIBLE"); 
+        puts(pass ? "POSSIBLE" : "IMPOSSIBLE");
     }
     return 0;
 }

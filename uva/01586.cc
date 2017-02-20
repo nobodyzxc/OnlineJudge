@@ -23,7 +23,7 @@ double parse(char str[] , int *i){
     (*i)++;
     while(str[(*i)] < 65 && str[(*i)] != 0)
        rtn *= 10 , rtn += (double)(str[*i] - '0') , (*i)++;
-    (*i)--; 
+    (*i)--;
     return rtn ? rtn : 1.0;
 }
 

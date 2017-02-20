@@ -5,6 +5,6 @@ int main(void){
         for(sp = s , tp = t ; *tp && *sp ;
                 sp += (*sp - *tp ? 0 : 1) , tp++);
         puts(*sp ? "No" : "Yes");
-    } 
+    }
     return 0;
 }

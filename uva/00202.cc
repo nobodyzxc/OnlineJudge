@@ -17,7 +17,7 @@ int main(void){
         *sp = 0;
         for(i = 0 , len = strlen(cyc) ; i < len && i < 50 ; i++)
             printf("%s%c" , r[m] == i + 1 ? "(" : "" , cyc[i]);
-        if(i < len - 1) printf("..."); 
+        if(i < len - 1) printf("...");
         if(m == 0) printf("(0");
         puts(")");
         printf("   %d = number of digits in repeating cycle\n\n" , cyclen - r[m]);

@@ -14,7 +14,7 @@ int main(void){
                     min = i;
                 break;
             }
-        } 
+        }
         for(int i = 0 ; i < n ; i++)
             printf("%c" , cir[(min + i) % n]);
         puts("");

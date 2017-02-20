@@ -14,10 +14,10 @@ int main(void){
         memset(tab , 0 , sizeof(tab));
         for(int i = 0 ; i < row ; i++)
                 fgets(map[i] , 14 , stdin);
-        
+
         for(int i = 0 ; i < row ; i++)
             for(int j = 0 ; j < col ; j++)
-                if(map[i][j] != '*' && outOfRange(i , j)) 
+                if(map[i][j] != '*' && outOfRange(i , j))
                     tab[i][j] = ++orb;
         kase ? puts("") : 0;
         printf("puzzle #%d:\n" , ++kase);
@@ -31,7 +31,7 @@ int main(void){
                     puts("");
                 }
             }
-        puts("Down"); 
+        puts("Down");
         for(int i = 0 ; i < row ; i++)
             for(int j = 0 ; j < col ; j++){
                 if(tab[i][j] != 0){
@@ -42,6 +42,6 @@ int main(void){
                     puts("");
                 }
             }
-    } 
+    }
     return 0;
 }

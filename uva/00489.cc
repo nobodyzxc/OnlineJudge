@@ -2,7 +2,7 @@
 #include<cstring>
 #define mx 100
 int left , chc , rnd , stat , ansLen;
-char ans[mx] , gus[mx] , 
+char ans[mx] , gus[mx] ,
      msg[][30] = {"You lose." , "You chickened out." , "You win."};
 
 bool guess(char ch){
@@ -13,7 +13,6 @@ bool guess(char ch){
     if(!chLeft) stat = 1 , rtn = true;
     if(chc >= 7 && (!stat)) stat = -1 , rtn = true;
     return rtn;
-    
 }
 
 int main(void){

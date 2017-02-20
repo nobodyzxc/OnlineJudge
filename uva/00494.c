@@ -12,10 +12,8 @@ int main(void){
 				isword = 1;
 			}
 			else{
-				if(isword){
-					cnt++;
-					isword = 0;
-				}
+				if(isword)
+					cnt++ , isword = 0;
 			}
 		}
 		printf("%d\n" , cnt);

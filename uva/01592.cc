@@ -19,8 +19,8 @@ int main(void){
             for(int j = 0 ; j < m ; j++){
                 int cellend = entry.find(",");
                 if(~cellend){//found
-                    cell = entry.substr(0 , cellend); 
-                    entry = entry.substr(cellend + 1); 
+                    cell = entry.substr(0 , cellend);
+                    entry = entry.substr(cellend + 1);
                 }
                 else//not found
                     cell = entry.substr(0);

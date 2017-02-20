@@ -4,9 +4,9 @@ using namespace std;
 char tab[5][8] , ch;
 
 struct direction { int y , x; } d[4] = {
-    { .y = -1 , .x = 0 } , 
-    { .y =  1 , .x = 0 } , 
-    { .y =  0 , .x =-1 } , 
+    { .y = -1 , .x = 0 } ,
+    { .y =  1 , .x = 0 } ,
+    { .y =  0 , .x =-1 } ,
     { .y =  0 , .x = 1 }
 } , empty;
 
@@ -33,7 +33,7 @@ bool moveTab(int c){
     int newY = empty.y + d[dirIdx(c)].y ,
         newX = empty.x + d[dirIdx(c)].x;
     if(dirIdx(c) == -1 || (!inRnage(newY , newX))) return false;
-    swap(tab[empty.y][empty.x] , tab[newY][newX]); 
+    swap(tab[empty.y][empty.x] , tab[newY][newX]);
     empty.y = newY;
     empty.x = newX;
     return true;
@@ -43,7 +43,7 @@ int main(void){
     int kase = 0;
     while(1){
         int valid = 1;
-        for(int i = 0 ; i < 5 ; i++)        
+        for(int i = 0 ; i < 5 ; i++)
             if(!fgets(tab[i] , 8 , stdin)) return 0;
             else if(tab[i][4] == '\n') tab[i][4] = ' ';
         for(int i = 0 ; i < 25 ; i++)
