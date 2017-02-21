@@ -31,7 +31,7 @@ int legal(int y , int x){
 }
 
 //check too dirty , should Reverse Thinking
-//let "black general" go , by the other chess's method
+//let "black general" go by the other chess's method
 bool check(vector<Chess> &red , int genNxtY , int genNxtX){
     for(int i = 0 ; i < rn ; i++){
         if(red[i].y == genNxtY && red[i].x == genNxtX)
